@@ -1,0 +1,35 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pmdco: <https://w3id.org/pmd/co/>
+PREFIX fsp: <https://w3id.org/pmd/fsp/>
+
+SELECT ?id ?molarity ?solvent_name ?solute_name
+WHERE {
+
+?precursor rdf:type fsp:Precursor . # get all precursor entities
+?mol rdf:type fsp:Molarity . # get all molarity entities
+?precursor pmdco:characteristic ?mol . # get the molarities associated with the precursors
+?mol pmdco:value ?molarity . # extract the molarity value (e.g. float)
+
+?mixing pmdco:output ?precursor . # get mixing processes containing the above
+# identified precursors
+
+?mixing pmdco:input ?solvent . # get associated solvents
+?solvent rdf:type fsp:Solvent .
+?solvent pmdco:characteristic ?solvent_composition . # get the value object containing
+?solvent_composition rdf:type pmdco:ChemicalComposition . # the solvent name
+?solvent_composition pmdco:value ?solvent_name . # extract the solvent name
+
+?mixing pmdco:input ?solute . # get associated solutes
+?solute rdf:type fsp:Solute .
+?solute pmdco:characteristic ?solute_composition . # get the value object containing
+?solute_composition rdf:type pmdco:ChemicalComposition . # the solute name
+?solute_composition pmdco:value ?solute_name . # extract the solute name
+
+?precursor_mixing pmdco:input ?precursor . # get associated precursor mixing
+?precursor_mixing pmdco:nextProcess ?fsp_process . # get associated FSP experiment
+?fsp_process pmdco:characteristic ?identifier . # get value object containing
+?identifier rdf:type pmdco:ProjectIdentifier . # the experiment ID
+?identifier pmdco:value ?id . # extract the experiment ID
+
+FILTER(?solute_name = "Ferrocene") # filter for experiments containing
+} # ‘Ferrocene’ as solute
