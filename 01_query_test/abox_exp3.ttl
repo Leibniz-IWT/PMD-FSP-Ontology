@@ -1,0 +1,278 @@
+@prefix : <https://w3id.org/pmd/co/entity/> .
+@prefix co: <https://w3id.org/pmd/co/> .
+@prefix fsp: <https://w3id.org/pmd/fsp/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix provo: <http://www.w3.org/ns/prov-o#> .
+@prefix qudt: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+co:entity a owl:Ontology .
+
+:FlameSprayPyrolysisReactor_vz6w a owl:NamedIndividual,
+        fsp:FlameSprayPyrolysisReactor ;
+    co:component :NanoparticleFilter_pb5f,
+        :TethisNozzle_9gym ;
+    co:executes :FlamesprayPyrolysis_xk82 .
+
+:Mixing_4gtz a owl:NamedIndividual,
+        fsp:Mixing ;
+    co:characteristic :Date_mlnc,
+        :Leibniz-IWT,
+        :Operator_1qwn,
+        :Operator_c3ou ;
+    co:input :Solute_azuw,
+        :Solvent_gzxt ;
+    co:nextProcess :Mixing_rbx7 ;
+    co:output :Precursor_71yh .
+
+:Mixing_4vo5 a owl:NamedIndividual,
+        fsp:Mixing ;
+    co:characteristic :Date_mlnc,
+        :Leibniz-IWT,
+        :Operator_1qwn,
+        :Operator_c3ou ;
+    co:input :Solute_wdbc,
+        :Solvent_p3sm ;
+    co:nextProcess :Mixing_rbx7 ;
+    co:output :Precursor_j81e .
+
+:ChemicalComposition_32bd a owl:NamedIndividual,
+        co:ChemicalComposition ;
+    co:value "Y butoxide"^^xsd:string .
+
+:ChemicalComposition_4gov a owl:NamedIndividual,
+        co:ChemicalComposition ;
+    co:value "xylene"^^xsd:string .
+
+:ChemicalComposition_71xm a owl:NamedIndividual,
+        co:ChemicalComposition ;
+    co:value "Ta ethoxide"^^xsd:string .
+
+:ChemicalComposition_ahk7 a owl:NamedIndividual,
+        co:ChemicalComposition ;
+    co:value "Y"^^xsd:string .
+
+:ChemicalComposition_k24y a owl:NamedIndividual,
+        co:ChemicalComposition ;
+    co:value "toluene"^^xsd:string .
+
+:ChemicalComposition_qmsu a owl:NamedIndividual,
+        co:ChemicalComposition ;
+    co:value "methane"^^xsd:string .
+
+:ChemicalComposition_t7a8 a owl:NamedIndividual,
+        co:ChemicalComposition ;
+    co:value "O2"^^xsd:string .
+
+:ChemicalComposition_uzk6 a owl:NamedIndividual,
+        co:ChemicalComposition ;
+    co:value "Y Ta"^^xsd:string .
+
+:ChemicalComposition_zbks a owl:NamedIndividual,
+        co:ChemicalComposition ;
+    co:value "Ta"^^xsd:string .
+
+:FuelGas_2w1y a owl:NamedIndividual,
+        fsp:FuelGas ;
+    co:characteristic :ChemicalComposition_qmsu,
+        :Purity_5sg2,
+        :VolumeFlow_24bg .
+
+:FuelGas_xecd a owl:NamedIndividual,
+        fsp:OxidationGas ;
+    co:characteristic :ChemicalComposition_t7a8,
+        :Purity_7b8v,
+        :VolumeFlow_bgr3 .
+
+:LOT_4gxe a owl:NamedIndividual,
+        fsp:LOT ;
+    co:value "QWERTZ"^^xsd:string .
+
+:LOT_6t49 a owl:NamedIndividual,
+        fsp:LOT ;
+    co:value "LLLLLLL"^^xsd:string .
+
+:LOT_g6t4 a owl:NamedIndividual,
+        fsp:LOT ;
+    co:value "ASDFGH"^^xsd:string .
+
+:LOT_wkhb a owl:NamedIndividual,
+        fsp:LOT ;
+    co:value "None"^^xsd:decimal .
+
+:Manufacturer_02ja a owl:NamedIndividual,
+        co:Manufacturer ;
+    co:value "VWR"^^xsd:string .
+
+:Manufacturer_n1eo a owl:NamedIndividual,
+        co:Manufacturer ;
+    co:value "Strem"^^xsd:string .
+
+:Manufacturer_p0u1 a owl:NamedIndividual,
+        co:Manufacturer ;
+    co:value "Sigma Aldrich"^^xsd:string .
+
+:Manufacturer_qz0i a owl:NamedIndividual,
+        co:Manufacturer ;
+    co:value "None"^^xsd:decimal .
+
+:Molarity_71fv a owl:NamedIndividual,
+        fsp:Molarity ;
+    co:unit qudt:MOL ;
+    co:value 0.5 .
+
+:Molarity_bq5a a owl:NamedIndividual,
+        fsp:Molarity ;
+    co:unit qudt:MOL ;
+    co:value 0.5 .
+
+:NanoparticleFilter_pb5f a owl:NamedIndividual,
+        fsp:NanoparticleFilter .
+
+:Nanoparticle_bn07 a owl:NamedIndividual,
+        fsp:Nanoparticle ;
+    co:characteristic :Weight_b4za .
+
+:NozzleFilterDistance_s5jp a owl:NamedIndividual,
+        fsp:NozzleFilterDistance ;
+    co:unit qudt:CentiM ;
+    co:value 60.0 .
+
+:PressureDrop_zu41 a owl:NamedIndividual,
+        fsp:PressureDrop ;
+    co:unit qudt:BAR ;
+    co:value 1.5 .
+
+:ProjectIdentifier_kc2w a owl:NamedIndividual,
+        co:ProjectIdentifier ;
+    co:value "exp3"^^xsd:string .
+
+:Purity_5sg2 a owl:NamedIndividual,
+        fsp:Purity ;
+    co:value 3.5 .
+
+:Purity_7b8v a owl:NamedIndividual,
+        fsp:Purity ;
+    co:value 5.0 .
+
+:Solute_azuw a owl:NamedIndividual,
+        fsp:Solute ;
+    co:characteristic :ChemicalComposition_32bd,
+        :LOT_g6t4,
+        :Manufacturer_p0u1 .
+
+:Solute_wdbc a owl:NamedIndividual,
+        fsp:Solute ;
+    co:characteristic :ChemicalComposition_71xm,
+        :LOT_4gxe,
+        :Manufacturer_n1eo .
+
+:Solvent_gzxt a owl:NamedIndividual,
+        fsp:Solvent ;
+    co:characteristic :ChemicalComposition_k24y,
+        :LOT_wkhb,
+        :Manufacturer_qz0i .
+
+:Solvent_p3sm a owl:NamedIndividual,
+        fsp:Solvent ;
+    co:characteristic :ChemicalComposition_4gov,
+        :LOT_6t49,
+        :Manufacturer_02ja .
+
+:TethisNozzle_9gym a owl:NamedIndividual,
+        fsp:TethisNozzle .
+
+:VolumeFlow_24bg a owl:NamedIndividual,
+        fsp:VolumeFlow ;
+    co:unit qudt:L-PER-MIN ;
+    co:value 1.5 .
+
+:VolumeFlow_bgr3 a owl:NamedIndividual,
+        fsp:VolumeFlow ;
+    co:unit qudt:L-PER-MIN ;
+    co:value 3.2 .
+
+:Volume_1u4s a owl:NamedIndividual,
+        fsp:Volume ;
+    co:unit qudt:MilliL ;
+    co:value 100.0 .
+
+:Volume_l4he a owl:NamedIndividual,
+        fsp:Volume ;
+    co:unit qudt:MilliL ;
+    co:value 50.0 .
+
+:Volume_un8y a owl:NamedIndividual,
+        fsp:Volume ;
+    co:unit qudt:MilliL ;
+    co:value 50.0 .
+
+:Weight_b4za a owl:NamedIndividual,
+        co:Weight ;
+    co:unit qudt:GM ;
+    co:value 743.0 .
+
+:FeedRate_fmaj a owl:NamedIndividual,
+        fsp:FeedRate ;
+    co:unit qudt:L-PER-MIN ;
+    co:value 5.0 .
+
+:FlamesprayPyrolysis_xk82 a owl:NamedIndividual,
+        fsp:FlamesprayPyrolysis ;
+    co:characteristic :Date_mlnc,
+        :FeedRate_fmaj,
+        :Leibniz-IWT,
+        :NozzleFilterDistance_s5jp,
+        :Operator_1qwn,
+        :Operator_c3ou,
+        :PressureDrop_zu41,
+        :ProjectIdentifier_kc2w ;
+    co:input :FuelGas_2w1y,
+        :FuelGas_xecd,
+        :Precursor_3hi4 ;
+    co:output :Nanoparticle_bn07 .
+
+:Mixing_rbx7 a owl:NamedIndividual,
+        fsp:Mixing ;
+    co:characteristic :Date_mlnc,
+        :Leibniz-IWT,
+        :Operator_1qwn,
+        :Operator_c3ou ;
+    co:input :Precursor_71yh,
+        :Precursor_j81e ;
+    co:nextProcess :FlamesprayPyrolysis_xk82 ;
+    co:output :Precursor_3hi4 .
+
+:Precursor_3hi4 a owl:NamedIndividual,
+        fsp:Precursor ;
+    co:characteristic :ChemicalComposition_uzk6,
+        :FeedRate_fmaj,
+        :Volume_1u4s .
+
+:Precursor_71yh a owl:NamedIndividual,
+        fsp:Precursor ;
+    co:characteristic :ChemicalComposition_ahk7,
+        :Molarity_71fv,
+        :Volume_un8y .
+
+:Precursor_j81e a owl:NamedIndividual,
+        fsp:Precursor ;
+    co:characteristic :ChemicalComposition_zbks,
+        :Molarity_bq5a,
+        :Volume_l4he .
+
+:Date_mlnc a owl:NamedIndividual,
+        co:Date ;
+    co:value "2024-01-08T00:00:00"^^xsd:dateTime .
+
+:Leibniz-IWT a owl:NamedIndividual,
+        provo:Organization .
+
+:Operator_1qwn a owl:NamedIndividual,
+        co:Operator ;
+    co:value "Manuel Vollbrecht"^^xsd:string .
+
+:Operator_c3ou a owl:NamedIndividual,
+        co:Operator ;
+    co:value "Jan Derk Groeneveld"^^xsd:string .
+

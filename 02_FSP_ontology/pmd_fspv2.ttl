@@ -1,0 +1,402 @@
+@prefix : <https://w3id.org/pmd/fsp/> .
+@prefix fsp: <https://w3id.org/pmd/fsp/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/pmd/fsp/> .
+
+<https://w3id.org/pmd/fsp/> rdf:type owl:Ontology ;
+                             owl:versionIRI <https://w3id.org/pmd/fsp/2.0> ;
+                             owl:imports <https://w3id.org/pmd/co/2.0.7> ;
+                             <http://purl.org/dc/elements/1.1/creator> "Keno Krieger"@en ,
+                                                                       "Manuel Vollbrecht"@en ;
+                             <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0/> ;
+                             <http://purl.org/dc/terms/title> "Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp)"@en ;
+                             rdfs:comment "Ontology for a flame spray pyrolysis process manufacturing nanoparticles"@en ;
+                             owl:versionInfo 2.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/CHEBI_138675
+<http://purl.obolibrary.org/obo/CHEBI_138675> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_138675> .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_75958
+<http://purl.obolibrary.org/obo/CHEBI_75958> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Blank
+core:Blank rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Chemical
+core:Chemical rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/ChemicalComposition
+core:ChemicalComposition rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Component
+core:Component rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Distance
+core:Distance rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/EngineeredMaterial
+core:EngineeredMaterial rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/ManufacturingProcess
+core:ManufacturingProcess rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Object
+core:Object rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/ProcessingNode
+core:ProcessingNode rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Shape
+core:Shape rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/ValueObject
+core:ValueObject rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/fsp/Angle
+fsp:Angle rdf:type owl:Class ;
+          rdfs:subClassOf core:ValueObject ;
+          rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+          rdfs:label "Angle"@en ,
+                     "Winkel"@de ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The inclination of an entity with respect to a reference plane"@en .
+
+
+###  https://w3id.org/pmd/fsp/Cylindric
+fsp:Cylindric rdf:type owl:Class ;
+              rdfs:subClassOf core:Shape ;
+              rdfs:isDefinedBy "“Cylindrical.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/cylindrical. Accessed 7 Apr. 2024." ;
+              rdfs:label "Cylindric"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Relating to or having the form or properties of a cylinder."@en .
+
+
+###  https://w3id.org/pmd/fsp/DepositionComponent
+fsp:DepositionComponent rdf:type owl:Class ;
+                        rdfs:subClassOf core:Component ;
+                        rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                        rdfs:label "Deposition Component" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "The component used to separate an entity from a gas flow, e.g. a filter."@en .
+
+
+###  https://w3id.org/pmd/fsp/DispersionGas
+fsp:DispersionGas rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_138675> ,
+                                  core:Object ;
+                  rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                  rdfs:label "Dispersion Gas"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Gas which is used to disperse a liquid into droplets."@en .
+
+
+###  https://w3id.org/pmd/fsp/Enclosure
+fsp:Enclosure rdf:type owl:Class ;
+              rdfs:subClassOf core:Component ;
+              rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+              rdfs:label "Enclosure"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Physical hollow body which surrounds an entitiy with the purpose to protect it from ambient influences."@en .
+
+
+###  https://w3id.org/pmd/fsp/FeedRate
+fsp:FeedRate rdf:type owl:Class ;
+             rdfs:subClassOf fsp:VolumeFlow ;
+             rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+             rdfs:label "Feed Rate"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Temporal rate with which a defined volume of a species is fed into a process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FlameSprayPyrolysisReactor
+fsp:FlameSprayPyrolysisReactor rdf:type owl:Class ;
+                               rdfs:subClassOf fsp:Reactor ;
+                               rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                               rdfs:label "Flame Spray Pyrolysis Reactor"@en ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "static experimental set-up of the flame spray pyrolysis process, including nozzle and deposition specifications"@en .
+
+
+###  https://w3id.org/pmd/fsp/FlamesprayPyrolysis
+fsp:FlamesprayPyrolysis rdf:type owl:Class ;
+                        rdfs:subClassOf fsp:NanoparticleSynthesis ;
+                        rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                        rdfs:label "Flame Spray Pyrolysis"@en ,
+                                   "Flammensprühpyrolyse"@de ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "A manufacturing process with the intend to synthesize aggregated nanoparticles in the gas phase through the controlled combustion of a dispersed liquid precursor solution."@en .
+
+
+###  https://w3id.org/pmd/fsp/FuelGas
+fsp:FuelGas rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_138675> ,
+                            core:Object ;
+            rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+            rdfs:label "Fuel Gas"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Educt gas taking part in a combustion process."@en .
+
+
+###  https://w3id.org/pmd/fsp/GDFFilter
+fsp:GDFFilter rdf:type owl:Class ;
+              rdfs:subClassOf fsp:NanoparticleFilter ;
+              rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+              rdfs:label "GD/F Filter"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Filter class, made of amorphous silicon dioxide."@en .
+
+
+###  https://w3id.org/pmd/fsp/GasFlow
+fsp:GasFlow rdf:type owl:Class ;
+            rdfs:subClassOf fsp:VolumeFlow ;
+            rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+            rdfs:label "Gas Flow"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "The volume flow of a gas."@en .
+
+
+###  https://w3id.org/pmd/fsp/LOT
+fsp:LOT rdf:type owl:Class ;
+        rdfs:subClassOf core:Identifier ;
+        rdfs:isDefinedBy "https://w3id.org/pmd/fsp"@en ;
+        rdfs:label "LOT" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The LOT number of a specimen"@en .
+
+
+###  https://w3id.org/pmd/fsp/MeshSize
+fsp:MeshSize rdf:type owl:Class ;
+             rdfs:subClassOf core:ValueObject ;
+             rdfs:isDefinedBy "https://w3id.org/pmd/fsp"@en ;
+             rdfs:label "Mesh Size"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The mesh size of a sieve."@en .
+
+
+###  https://w3id.org/pmd/fsp/Mixing
+fsp:Mixing rdf:type owl:Class ;
+           rdfs:subClassOf core:ManufacturingProcess ;
+           rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+           rdfs:label "Mixing"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "process of combining two or more, initially spatially separated, species into one homogeneous mixture"@en .
+
+
+###  https://w3id.org/pmd/fsp/Molarity
+fsp:Molarity rdf:type owl:Class ;
+             rdfs:subClassOf core:Chemical ;
+             rdfs:isDefinedBy "DONALD J. PIETRZYK, CLYDE W. FRANK, in Analytical Chemistry, 1979" ;
+             rdfs:label "Molarity"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Molarity is a unit of concentration expressed as the number of moles of dissolved solute per liter of solution."@en .
+
+
+###  https://w3id.org/pmd/fsp/Nanoparticle
+fsp:Nanoparticle rdf:type owl:Class ;
+                 rdfs:subClassOf core:EngineeredMaterial ;
+                 rdfs:isDefinedBy "" ;
+                 rdfs:label "Nanoparticle"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A nanoscale particle"@en .
+
+
+###  https://w3id.org/pmd/fsp/NanoparticleFilter
+fsp:NanoparticleFilter rdf:type owl:Class ;
+                       rdfs:subClassOf fsp:DepositionComponent ;
+                       rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                       rdfs:label "Nanoparticle Filter" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "A component used for retrieving nanoparticles from the gas flow. Nanoparticles will accumulate on the filter and can later be scraped off."@en .
+
+
+###  https://w3id.org/pmd/fsp/NanoparticleSynthesis
+fsp:NanoparticleSynthesis rdf:type owl:Class ;
+                          rdfs:subClassOf core:ManufacturingProcess ;
+                          rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                          rdfs:label "Nanoparticle Synthesis"@en ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "A manufacturing process with the intend to synthesize nanoparticles."@en .
+
+
+###  https://w3id.org/pmd/fsp/Nozzle
+fsp:Nozzle rdf:type owl:Class ;
+           rdfs:subClassOf core:Component ;
+           rdfs:isDefinedBy "“Nozzle. ” Merriam-Webster.com Dictionary, Merriam-Webster, https://dictionary.cambridge.org/dictionary/english/nozzle. Accessed 7 Apr., 2024" ;
+           rdfs:label "Nozzle"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A short tube with a taper or constriction used (as on a hose) to speed up or direct a flow of fluid."@en .
+
+
+###  https://w3id.org/pmd/fsp/NozzleFilterDistance
+fsp:NozzleFilterDistance rdf:type owl:Class ;
+                         rdfs:subClassOf core:Distance ;
+                         rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                         rdfs:label "Nozzle Filter Distance"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Distance bewtween the annular gap of a nozzle and a filter medium."@en .
+
+
+###  https://w3id.org/pmd/fsp/NozzleNozzleDistance
+fsp:NozzleNozzleDistance rdf:type owl:Class ;
+                         rdfs:subClassOf core:Distance ;
+                         rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                         rdfs:label "Nozzle Nozzle Distance"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Euclidean distance between  the annular gaps of two nozzles."@en .
+
+
+###  https://w3id.org/pmd/fsp/OxidationGas
+fsp:OxidationGas rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_138675> ,
+                                 core:Object ;
+                 rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                 rdfs:label "Oxidation Gas"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Educt gas which contributes as an oxygen source in a combustion process."@en .
+
+
+###  https://w3id.org/pmd/fsp/Precursor
+fsp:Precursor rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_75958> ,
+                              core:Blank ;
+              rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+              rdfs:label "Precursor"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Liquid solution composed of solvent and solute that is dispersed and combusted in a flame spray pyrolysis process."@en .
+
+
+###  https://w3id.org/pmd/fsp/Pressure
+fsp:Pressure rdf:type owl:Class ;
+             rdfs:subClassOf core:ValueObject ;
+             rdfs:isDefinedBy "“Pressure.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/force. Accessed June 5th, 2023."@en ;
+             rdfs:label "Pressure"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The force or thrust exerted over a surface divided by its area."@en .
+
+
+###  https://w3id.org/pmd/fsp/PressureDrop
+fsp:PressureDrop rdf:type owl:Class ;
+                 rdfs:subClassOf core:ValueObject ;
+                 rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+                 rdfs:label "Pressure Drop"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A significant change in pressure measured over a time span or in a direction."@en .
+
+
+###  https://w3id.org/pmd/fsp/Purity
+fsp:Purity rdf:type owl:Class ;
+           rdfs:subClassOf core:Chemical ;
+           rdfs:isDefinedBy "“Purity.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/purity. Accessed 7 Apr. 2024." ;
+           rdfs:label "Purity"@en ,
+                      "Reinheit"@de ;
+           <http://www.w3.org/2004/02/skos/core#definition> "The quality or state of being pure"@en .
+
+
+###  https://w3id.org/pmd/fsp/Reactor
+fsp:Reactor rdf:type owl:Class ;
+            rdfs:subClassOf core:ProcessingNode ;
+            rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+            rdfs:label "Reactor"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "An entity which contains and controls a process."@en .
+
+
+###  https://w3id.org/pmd/fsp/SheathGas
+fsp:SheathGas rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_138675> ,
+                              core:Object ;
+              rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+              rdfs:label "Sheath Gas"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Gas which protects an entity from ambient influences, e.g. oxygen entrainment."@en .
+
+
+###  https://w3id.org/pmd/fsp/Sieve
+fsp:Sieve rdf:type owl:Class ;
+          rdfs:subClassOf core:ProcessingNode ;
+          rdfs:isDefinedBy "“Sieve.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/sieve. Accessed 23 Jul. 2024."@en ;
+          rdfs:label "Sieve"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A device with meshes or perforations through which finer particles of a mixture (as of ashes, flour, or sand) of various sizes may be passed to separate them from coarser ones, through which the liquid may be drained from liquid-containing material, or through which soft materials may be forced for reduction to fine particles"@en .
+
+
+###  https://w3id.org/pmd/fsp/Sieving
+fsp:Sieving rdf:type owl:Class ;
+            rdfs:subClassOf core:ManufacturingProcess ;
+            rdfs:isDefinedBy "https://w3id.org/pmd/fsp"@en ;
+            rdfs:label "Sieving"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "The process of separating finer particles from coarser ones by the means of a device with meshes."@en .
+
+
+###  https://w3id.org/pmd/fsp/Solute
+fsp:Solute rdf:type owl:Class .
+            rdfs:isDefinedBy "“Solute.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/solute. Accessed 23 Jul. 2024."@en ;
+            rdfs:label "Solute"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A dissolved substance."@en .
+
+
+###  https://w3id.org/pmd/fsp/Solvent
+fsp:Solvent rdf:type owl:Class .
+            rdfs:isDefinedBy "“Solvent.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/solvent. Accessed 23 Jul. 2024."@en ;
+            rdfs:label "Solvent"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A usually liquid substance capable of dissolving or dispersing one or more other substances"@en .
+
+
+###  https://w3id.org/pmd/fsp/SpraySynNozzle
+fsp:SpraySynNozzle rdf:type owl:Class ;
+                   rdfs:subClassOf fsp:Nozzle ;
+                   owl:disjointWith fsp:TethisNozzle ;
+                   rdfs:isDefinedBy "Schneider, F., Suleiman, S., Menser, J., Borukhovich, E., Wlokas, I., Kempf, A., Wiggers, H., and Schulz, C., Spraysyn—A Standardized Burner Configuration for Nanoparticle Synthesis in Spray Flames, Rev. Scientific Instr., vol. 90, no. 8, p. 085108, 2019." ;
+                   rdfs:label "Spray Syn Nozzle"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "A standard for a free-jet type burner that offers well-defined and simulation-friendly boundary conditions and geometries as well as accessibility for optical diagnostics."@en .
+
+
+###  https://w3id.org/pmd/fsp/TethisNozzle
+fsp:TethisNozzle rdf:type owl:Class ;
+                 rdfs:subClassOf fsp:Nozzle ;
+                 rdfs:isDefinedBy "L. Madler, H.K. Kammler, R. Mueller, S.E. Pratsinis, Controlled synthesis of nanostructured particles by flame spray pyrolysis, Journal of Aerosol Science, Volume 33, Issue 2, 2002" ;
+                 rdfs:label "Tethis Nozzle"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "An external-mixing gas-assisted nozzle that is made from a capillary tube of outer diameter 0.91 mm (inner diameter 0.6 mm) that lies in an opening of 1.2 mm in diameter creating an annular gap of 0.48 mm^2 maximum area. Precursor and fuel flow through the capillary tube while the dispersion gas passes through the annular gap. The capillary ends 0.5 mm above the opening."@en .
+
+
+###  https://w3id.org/pmd/fsp/VacuumPump
+fsp:VacuumPump rdf:type owl:Class ;
+               rdfs:subClassOf core:Component ;
+               rdfs:isDefinedBy "“Vacuump Pump. ” Merriam-Webster.com Dictionary, Merriam-Webster, https://dictionary.cambridge.org/dictionary/english/vacuum-pump. Accessed 7 Apr., 2024" ;
+               rdfs:label "Vacuum Pump"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A piece of equipment for removing air or gas from a container, creating a vacuum inside."@en .
+
+
+###  https://w3id.org/pmd/fsp/Volume
+fsp:Volume rdf:type owl:Class ;
+           rdfs:subClassOf core:ValueObject ;
+           rdfs:isDefinedBy "“Volume.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/volume. Accessed 7 Apr. 2024." ;
+           rdfs:label "Volume"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "The amount of space occupied by a three-dimensional object as measured in cubic units (such as quarts or liters)."@en .
+
+
+###  https://w3id.org/pmd/fsp/VolumeFlow
+fsp:VolumeFlow rdf:type owl:Class ;
+               rdfs:subClassOf core:ValueObject ;
+               rdfs:isDefinedBy "https://w3id.org/pmd/fsp" ;
+               rdfs:label "Volume Flow"@en ,
+                          "Volumenstrom"@de ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Temporal rate with which a defined volume of a species is moving."@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
