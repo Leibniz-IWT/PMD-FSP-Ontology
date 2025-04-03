@@ -1,0 +1,884 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/pmd/fsp/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/pmd/fsp/"
+     versionIRI="https://w3id.org/pmd/fsp/2.0">
+    <Prefix name="" IRI="https://w3id.org/pmd/fsp/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="pmdco" IRI="https://w3id.org/pmd/co/"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Import>https://w3id.org/pmd/co</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en">Keno Krieger</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en">Manuel Vollbrecht</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:license"/>
+        <IRI>http://creativecommons.org/licenses/by/4.0/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+        <Literal xml:lang="en">Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Ontology for a flame spray pyrolysis process manufacturing nanoparticles</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_138675"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_75958"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:Blank"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:Chemical"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:ChemicalComposition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:Component"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:Distance"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:EngineeredMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:ManufacturingProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:Object"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:ProcessingNode"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:Shape"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:ValueObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Angle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Cylindric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DepositionComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DispersionGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Enclosure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FeedRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FlameSprayPyrolysisReactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FlamesprayPyrolysis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FuelGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="GDFFilter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="GasFlow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LOT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Mixing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Molarity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Nanoparticle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NanoparticleFilter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NanoparticleSynthesis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Nozzle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NozzleFilterDistance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NozzleNozzleDistance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OxidationGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Precursor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Pressure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PressureDrop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Provider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Purity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Reactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SheathGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Solute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Solvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SpraySynNozzle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TethisNozzle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VacuumPump"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Volume"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VolumeFlow"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="pmdco:Identifier"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Angle"/>
+        <Class abbreviatedIRI="pmdco:ValueObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Cylindric"/>
+        <Class abbreviatedIRI="pmdco:Shape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DepositionComponent"/>
+        <Class abbreviatedIRI="pmdco:Component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DispersionGas"/>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_138675"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DispersionGas"/>
+        <Class abbreviatedIRI="pmdco:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Enclosure"/>
+        <Class abbreviatedIRI="pmdco:Component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FeedRate"/>
+        <Class IRI="VolumeFlow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FlameSprayPyrolysisReactor"/>
+        <Class IRI="Reactor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FlamesprayPyrolysis"/>
+        <Class IRI="NanoparticleSynthesis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FuelGas"/>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_138675"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FuelGas"/>
+        <Class abbreviatedIRI="pmdco:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="GDFFilter"/>
+        <Class IRI="NanoparticleFilter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="GasFlow"/>
+        <Class IRI="VolumeFlow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LOT"/>
+        <Class abbreviatedIRI="pmdco:Identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Mixing"/>
+        <Class abbreviatedIRI="pmdco:ManufacturingProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Molarity"/>
+        <Class abbreviatedIRI="pmdco:Chemical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nanoparticle"/>
+        <Class abbreviatedIRI="pmdco:EngineeredMaterial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NanoparticleFilter"/>
+        <Class IRI="DepositionComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NanoparticleSynthesis"/>
+        <Class abbreviatedIRI="pmdco:ManufacturingProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nozzle"/>
+        <Class abbreviatedIRI="pmdco:Component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NozzleFilterDistance"/>
+        <Class abbreviatedIRI="pmdco:Distance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NozzleNozzleDistance"/>
+        <Class abbreviatedIRI="pmdco:Distance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OxidationGas"/>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_138675"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OxidationGas"/>
+        <Class abbreviatedIRI="pmdco:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Precursor"/>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_75958"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Precursor"/>
+        <Class abbreviatedIRI="pmdco:Blank"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Pressure"/>
+        <Class abbreviatedIRI="pmdco:ValueObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PressureDrop"/>
+        <Class abbreviatedIRI="pmdco:ValueObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Provider"/>
+        <Class IRI="http://www.w3.org/ns/prov#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Purity"/>
+        <Class abbreviatedIRI="pmdco:Chemical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Reactor"/>
+        <Class abbreviatedIRI="pmdco:ProcessingNode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SheathGas"/>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_138675"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SheathGas"/>
+        <Class abbreviatedIRI="pmdco:Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Solute"/>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Solvent"/>
+        <Class IRI="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SpraySynNozzle"/>
+        <Class IRI="Nozzle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TethisNozzle"/>
+        <Class IRI="Nozzle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VacuumPump"/>
+        <Class abbreviatedIRI="pmdco:Component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Volume"/>
+        <Class abbreviatedIRI="pmdco:ValueObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VolumeFlow"/>
+        <Class abbreviatedIRI="pmdco:ValueObject"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="SpraySynNozzle"/>
+        <Class IRI="TethisNozzle"/>
+    </DisjointClasses>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Angle</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Angle</IRI>
+        <Literal xml:lang="en">Angle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Angle</IRI>
+        <Literal xml:lang="de">Winkel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Angle</IRI>
+        <Literal xml:lang="en">The inclination of an entity with respect to a reference plane</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Cylindric</IRI>
+        <Literal>“Cylindrical.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/cylindrical. Accessed 7 Apr. 2024.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Cylindric</IRI>
+        <Literal xml:lang="en">Cylindric</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Cylindric</IRI>
+        <Literal xml:lang="en">Relating to or having the form or properties of a cylinder.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>DepositionComponent</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DepositionComponent</IRI>
+        <Literal>Deposition Component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>DepositionComponent</IRI>
+        <Literal xml:lang="en">The component used to separate an entity from a gas flow, e.g. a filter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>DispersionGas</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DispersionGas</IRI>
+        <Literal xml:lang="en">Dispersion Gas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>DispersionGas</IRI>
+        <Literal xml:lang="en">Gas which is used to disperse a liquid into droplets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Enclosure</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Enclosure</IRI>
+        <Literal xml:lang="en">Enclosure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Enclosure</IRI>
+        <Literal xml:lang="en">Physical hollow body which surrounds an entitiy with the purpose to protect it from ambient influences.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>FeedRate</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FeedRate</IRI>
+        <Literal xml:lang="en">Feed Rate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>FeedRate</IRI>
+        <Literal xml:lang="en">Temporal rate with which a defined volume of a species is fed into a process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>FlameSprayPyrolysisReactor</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FlameSprayPyrolysisReactor</IRI>
+        <Literal xml:lang="en">Flame Spray Pyrolysis Reactor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>FlameSprayPyrolysisReactor</IRI>
+        <Literal xml:lang="en">static experimental set-up of the flame spray pyrolysis process, including nozzle and deposition specifications</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>FlamesprayPyrolysis</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FlamesprayPyrolysis</IRI>
+        <Literal xml:lang="en">Flame Spray Pyrolysis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FlamesprayPyrolysis</IRI>
+        <Literal xml:lang="de">Flammensprühpyrolyse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>FlamesprayPyrolysis</IRI>
+        <Literal xml:lang="en">A manufacturing process with the intend to synthesize aggregated nanoparticles in the gas phase through the controlled combustion of a dispersed liquid precursor solution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>FuelGas</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FuelGas</IRI>
+        <Literal xml:lang="en">Fuel Gas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>FuelGas</IRI>
+        <Literal xml:lang="en">Educt gas taking part in a combustion process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>GDFFilter</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GDFFilter</IRI>
+        <Literal xml:lang="en">GD/F Filter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>GDFFilter</IRI>
+        <Literal xml:lang="en">Filter class, made of amorphous silicon dioxide.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>GasFlow</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GasFlow</IRI>
+        <Literal xml:lang="en">Gas Flow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>GasFlow</IRI>
+        <Literal xml:lang="en">The volume flow of a gas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LOT</IRI>
+        <Literal xml:lang="en">LOT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Mixing</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Mixing</IRI>
+        <Literal xml:lang="en">Mixing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Mixing</IRI>
+        <Literal xml:lang="en">process of combining two or more, initially spatially separated, species into one homogeneous mixture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Molarity</IRI>
+        <Literal>DONALD J. PIETRZYK, CLYDE W. FRANK, in Analytical Chemistry, 1979</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Molarity</IRI>
+        <Literal xml:lang="en">Molarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Molarity</IRI>
+        <Literal xml:lang="en">Molarity is a unit of concentration expressed as the number of moles of dissolved solute per liter of solution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Nanoparticle</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Nanoparticle</IRI>
+        <Literal xml:lang="en">Nanoparticle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Nanoparticle</IRI>
+        <Literal xml:lang="en">A nanoscale particle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>NanoparticleFilter</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NanoparticleFilter</IRI>
+        <Literal>Nanoparticle Filter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>NanoparticleFilter</IRI>
+        <Literal xml:lang="en">A component used for retrieving nanoparticles from the gas flow. Nanoparticles will accumulate on the filter and can later be scraped off.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>NanoparticleSynthesis</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NanoparticleSynthesis</IRI>
+        <Literal xml:lang="en">Nanoparticle Synthesis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>NanoparticleSynthesis</IRI>
+        <Literal xml:lang="en">A manufacturing process with the intend to synthesize nanoparticles.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Nozzle</IRI>
+        <Literal>“Nozzle. ” Merriam-Webster.com Dictionary, Merriam-Webster, https://dictionary.cambridge.org/dictionary/english/nozzle. Accessed 7 Apr., 2024</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Nozzle</IRI>
+        <Literal xml:lang="en">Nozzle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Nozzle</IRI>
+        <Literal xml:lang="en">A short tube with a taper or constriction used (as on a hose) to speed up or direct a flow of fluid.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>NozzleFilterDistance</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NozzleFilterDistance</IRI>
+        <Literal xml:lang="en">Nozzle Filter Distance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>NozzleFilterDistance</IRI>
+        <Literal xml:lang="en">Distance bewtween the annular gap of a nozzle and a filter medium.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>NozzleNozzleDistance</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NozzleNozzleDistance</IRI>
+        <Literal xml:lang="en">Nozzle Nozzle Distance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>NozzleNozzleDistance</IRI>
+        <Literal xml:lang="en">Euclidean distance between  the annular gaps of two nozzles.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>OxidationGas</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OxidationGas</IRI>
+        <Literal xml:lang="en">Oxidation Gas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>OxidationGas</IRI>
+        <Literal xml:lang="en">Educt gas which contributes as an oxygen source in a combustion process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Precursor</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Precursor</IRI>
+        <Literal xml:lang="en">Precursor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Precursor</IRI>
+        <Literal xml:lang="en">Liquid solution composed of solvent and solute that is dispersed and combusted in a flame spray pyrolysis process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Pressure</IRI>
+        <Literal xml:lang="en">“Pressure.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/force. Accessed June 5th, 2023.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Pressure</IRI>
+        <Literal xml:lang="en">Pressure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Pressure</IRI>
+        <Literal xml:lang="en">The force or thrust exerted over a surface divided by its area.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>PressureDrop</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PressureDrop</IRI>
+        <Literal xml:lang="en">Pressure Drop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>PressureDrop</IRI>
+        <Literal xml:lang="en">A significant change in pressure measured over a time span or in a direction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Provider</IRI>
+        <Literal xml:lang="en">Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Purity</IRI>
+        <Literal>“Purity.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/purity. Accessed 7 Apr. 2024.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Purity</IRI>
+        <Literal xml:lang="en">Purity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Purity</IRI>
+        <Literal xml:lang="de">Reinheit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Purity</IRI>
+        <Literal xml:lang="en">The quality or state of being pure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Reactor</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Reactor</IRI>
+        <Literal xml:lang="en">Reactor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Reactor</IRI>
+        <Literal xml:lang="en">An entity which contains and controls a process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>SheathGas</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SheathGas</IRI>
+        <Literal xml:lang="en">Sheath Gas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>SheathGas</IRI>
+        <Literal xml:lang="en">Gas which protects an entity from ambient influences, e.g. oxygen entrainment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Solute</IRI>
+        <Literal xml:lang="en">Solute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Solvent</IRI>
+        <Literal xml:lang="en">Solvent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>SpraySynNozzle</IRI>
+        <Literal>Schneider, F., Suleiman, S., Menser, J., Borukhovich, E., Wlokas, I., Kempf, A., Wiggers, H., and Schulz, C., Spraysyn—A Standardized Burner Configuration for Nanoparticle Synthesis in Spray Flames, Rev. Scientific Instr., vol. 90, no. 8, p. 085108, 2019.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SpraySynNozzle</IRI>
+        <Literal xml:lang="en">Spray Syn Nozzle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>SpraySynNozzle</IRI>
+        <Literal xml:lang="en">A standard for a free-jet type burner that offers well-defined and simulation-friendly boundary conditions and geometries as well as accessibility for optical diagnostics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>TethisNozzle</IRI>
+        <Literal>L. Madler, H.K. Kammler, R. Mueller, S.E. Pratsinis, Controlled synthesis of nanostructured particles by flame spray pyrolysis, Journal of Aerosol Science, Volume 33, Issue 2, 2002</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TethisNozzle</IRI>
+        <Literal xml:lang="en">Tethis Nozzle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>TethisNozzle</IRI>
+        <Literal xml:lang="en">An external-mixing gas-assisted nozzle that is made from a capillary tube of outer diameter 0.91 mm (inner diameter 0.6 mm) that lies in an opening of 1.2 mm in diameter creating an annular gap of 0.48 mm^2 maximum area. Precursor and fuel flow through the capillary tube while the dispersion gas passes through the annular gap. The capillary ends 0.5 mm above the opening.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>VacuumPump</IRI>
+        <Literal>“Vacuump Pump. ” Merriam-Webster.com Dictionary, Merriam-Webster, https://dictionary.cambridge.org/dictionary/english/vacuum-pump. Accessed 7 Apr., 2024</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>VacuumPump</IRI>
+        <Literal xml:lang="en">Vacuum Pump</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>VacuumPump</IRI>
+        <Literal xml:lang="en">A piece of equipment for removing air or gas from a container, creating a vacuum inside.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Volume</IRI>
+        <Literal>“Volume.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/volume. Accessed 7 Apr. 2024.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Volume</IRI>
+        <Literal xml:lang="en">Volume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Volume</IRI>
+        <Literal xml:lang="en">The amount of space occupied by a three-dimensional object as measured in cubic units (such as quarts or liters).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>VolumeFlow</IRI>
+        <Literal>https://w3id.org/pmd/fsp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>VolumeFlow</IRI>
+        <Literal xml:lang="en">Volume Flow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>VolumeFlow</IRI>
+        <Literal xml:lang="de">Volumenstrom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>VolumeFlow</IRI>
+        <Literal xml:lang="en">Temporal rate with which a defined volume of a species is moving.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
