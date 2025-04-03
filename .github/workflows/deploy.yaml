@@ -1,0 +1,30 @@
+name: HTML
+
+on:
+  push:
+    branches:
+    - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      #with:
+      #ref: v2.0.8
+      #path: v2.0.8
+    - name: Build HTML for 2.0.8
+      run: | 
+           wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
+           mkdir public/2.0.8 
+           java -jar widoco.jar -ontFile 00_FSP_ontology/pmd_fspv2.ttl -outFolder public/2.0.8  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl           
+           ls public/2.0.8/           
+           cp public/2.0.8/index-en.html public/2.0.8/index.html
+
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v3
+      with:
+        target_branch: gh-pages
+        build_dir: public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
