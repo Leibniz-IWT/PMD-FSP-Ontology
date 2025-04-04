@@ -15,14 +15,15 @@ jobs:
     - name: Build HTML for 2.0.8
       run: | 
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
+           mkdir public
            java -jar widoco.jar -ontFile 00_FSP_ontology/pmd_fspv2.owl -outFolder .  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl           
-           #cp index-en.html index.html
+           cp docs/index-en.html docs/index.html
 
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v3
       with:
         target_branch: gh-pages
-        build_dir: .
+        build_dir: public
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
