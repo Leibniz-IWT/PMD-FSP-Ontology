@@ -18,6 +18,7 @@ jobs:
            mkdir public
            java -jar widoco.jar -ontFile 00_FSP_ontology/pmd_fspv2.owl -outFolder .  -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl           
            cp doc/index-en.html public/index.html
+           cp doc/ontology.owl public/ontology.rdf
 
     - name: Deploy to GitHub Pages
       if: success()
