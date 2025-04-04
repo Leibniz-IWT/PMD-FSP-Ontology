@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/pmd/fsp/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/pmd/fsp/","name":"Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp)", "headline":"Document describing the ontology https://w3id.org/pmd/fsp/", "dateReleased":"Fri Apr 04 07:44:11 UTC 2025", "version":"2.0", "author":[{"@type":"Person","name":"Keno Krieger"},{"@type":"Person","name":"Manuel Vollbrecht"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Inhaltsverzeichnis</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp)</h1>
+
+
+<dl>
+<dt>Diese Version:</dt>
+<dd><a href="https://w3id.org/pmd/fsp/2.0">https://w3id.org/pmd/fsp/2.0</a></dd>
+<dt>Revision:</dt>
+<dd>2.0</dd>
+<dt>Autoren:</dt>
+<dd>Keno Krieger</dd><dd>Manuel Vollbrecht</dd>
+
+<dt>Importierte Ontologien:</dt>
+<dd><a href="https://w3id.org/pmd/co/">&lt;https://w3id.org/pmd/co/&gt;</a></dd>
+
+<dt>Download Serialisierung:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Lizenz:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-Dies%20ist%20der%20Lizenzname-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
+</dd><dt>Visualisierung:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Zitieren als:</dt>
+<dd>Keno Krieger, Manuel Vollbrecht. Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp). Revision: 2.0. Retrieved from: https://w3id.org/pmd/fsp/2.0</dd>
+</dl>
+
+<a href="provenance/provenance-de.html" target="_blank">Ursprung dieser Seite</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp): &uuml;berblick <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<span class="markdown">
+Diese Ontologie beinhaltet die folgenden Klassen und Eigenschaften.</span>
+<h4>Klassen</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Cylindric" title="https://w3id.org/pmd/fsp/Cylindric">Cylindric</a>
+   </li>
+   <li>
+      <a href="#DepositionComponent" title="https://w3id.org/pmd/fsp/DepositionComponent">Deposition Component</a>
+   </li>
+   <li>
+      <a href="#DispersionGas" title="https://w3id.org/pmd/fsp/DispersionGas">Dispersion Gas</a>
+   </li>
+   <li>
+      <a href="#Enclosure" title="https://w3id.org/pmd/fsp/Enclosure">Enclosure</a>
+   </li>
+   <li>
+      <a href="#FeedRate" title="https://w3id.org/pmd/fsp/FeedRate">Feed Rate</a>
+   </li>
+   <li>
+      <a href="#FlameSprayPyrolysisReactor"
+         title="https://w3id.org/pmd/fsp/FlameSprayPyrolysisReactor">Flame Spray Pyrolysis Reactor</a>
+   </li>
+   <li>
+      <a href="#FlamesprayPyrolysis" title="https://w3id.org/pmd/fsp/FlamesprayPyrolysis">Flammensprühpyrolyse</a>
+   </li>
+   <li>
+      <a href="#FuelGas" title="https://w3id.org/pmd/fsp/FuelGas">Fuel Gas</a>
+   </li>
+   <li>
+      <a href="#GasFlow" title="https://w3id.org/pmd/fsp/GasFlow">Gas Flow</a>
+   </li>
+   <li>
+      <a href="#GDFFilter" title="https://w3id.org/pmd/fsp/GDFFilter">GD/F Filter</a>
+   </li>
+   <li>
+      <a href="#LOT" title="https://w3id.org/pmd/fsp/LOT">LOT</a>
+   </li>
+   <li>
+      <a href="#Mixing" title="https://w3id.org/pmd/fsp/Mixing">Mixing</a>
+   </li>
+   <li>
+      <a href="#Molarity" title="https://w3id.org/pmd/fsp/Molarity">Molarity</a>
+   </li>
+   <li>
+      <a href="#Nanoparticle" title="https://w3id.org/pmd/fsp/Nanoparticle">Nanoparticle</a>
+   </li>
+   <li>
+      <a href="#NanoparticleFilter" title="https://w3id.org/pmd/fsp/NanoparticleFilter">Nanoparticle Filter</a>
+   </li>
+   <li>
+      <a href="#NanoparticleSynthesis" title="https://w3id.org/pmd/fsp/NanoparticleSynthesis">Nanoparticle Synthesis</a>
+   </li>
+   <li>
+      <a href="#Nozzle" title="https://w3id.org/pmd/fsp/Nozzle">Nozzle</a>
+   </li>
+   <li>
+      <a href="#NozzleFilterDistance" title="https://w3id.org/pmd/fsp/NozzleFilterDistance">Nozzle Filter Distance</a>
+   </li>
+   <li>
+      <a href="#NozzleNozzleDistance" title="https://w3id.org/pmd/fsp/NozzleNozzleDistance">Nozzle Nozzle Distance</a>
+   </li>
+   <li>
+      <a href="#OxidationGas" title="https://w3id.org/pmd/fsp/OxidationGas">Oxidation Gas</a>
+   </li>
+   <li>
+      <a href="#Precursor" title="https://w3id.org/pmd/fsp/Precursor">Precursor</a>
+   </li>
+   <li>
+      <a href="#Pressure" title="https://w3id.org/pmd/fsp/Pressure">Pressure</a>
+   </li>
+   <li>
+      <a href="#PressureDrop" title="https://w3id.org/pmd/fsp/PressureDrop">Pressure Drop</a>
+   </li>
+   <li>
+      <a href="#Provider" title="https://w3id.org/pmd/fsp/Provider">Provider</a>
+   </li>
+   <li>
+      <a href="#Reactor" title="https://w3id.org/pmd/fsp/Reactor">Reactor</a>
+   </li>
+   <li>
+      <a href="#Purity" title="https://w3id.org/pmd/fsp/Purity">Reinheit</a>
+   </li>
+   <li>
+      <a href="#SheathGas" title="https://w3id.org/pmd/fsp/SheathGas">Sheath Gas</a>
+   </li>
+   <li>
+      <a href="#Solute" title="https://w3id.org/pmd/fsp/Solute">Solute</a>
+   </li>
+   <li>
+      <a href="#Solvent" title="https://w3id.org/pmd/fsp/Solvent">Solvent</a>
+   </li>
+   <li>
+      <a href="#SpraySynNozzle" title="https://w3id.org/pmd/fsp/SpraySynNozzle">Spray Syn Nozzle</a>
+   </li>
+   <li>
+      <a href="#TethisNozzle" title="https://w3id.org/pmd/fsp/TethisNozzle">Tethis Nozzle</a>
+   </li>
+   <li>
+      <a href="#VacuumPump" title="https://w3id.org/pmd/fsp/VacuumPump">Vacuum Pump</a>
+   </li>
+   <li>
+      <a href="#Volume" title="https://w3id.org/pmd/fsp/Volume">Volume</a>
+   </li>
+   <li>
+      <a href="#VolumeFlow" title="https://w3id.org/pmd/fsp/VolumeFlow">Volumenstrom</a>
+   </li>
+   <li>
+      <a href="#Angle" title="https://w3id.org/pmd/fsp/Angle">Winkel</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/license" title="http://purl.org/dc/elements/1.1/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp): Beschreibung <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+
+<span class="markdown">Ontology for a flame spray pyrolysis process manufacturing nanoparticles</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Querverweis f&uuml;r... Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp) Klassen, Object Properties und Data Properties<span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte Property, die definiert wurden durch Platform Material Digital Flame Spray Pyrolysis Ontology (pmdfsp).
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Klassen</h3>
+ <ul class="hlist">
+  <li><a href="#Cylindric" title="https://w3id.org/pmd/fsp/Cylindric">Cylindric</a></li>
+  <li><a href="#DepositionComponent" title="https://w3id.org/pmd/fsp/DepositionComponent">Deposition Component</a></li>
+  <li><a href="#DispersionGas" title="https://w3id.org/pmd/fsp/DispersionGas">Dispersion Gas</a></li>
+  <li><a href="#Enclosure" title="https://w3id.org/pmd/fsp/Enclosure">Enclosure</a></li>
+  <li><a href="#FeedRate" title="https://w3id.org/pmd/fsp/FeedRate">Feed Rate</a></li>
+  <li><a href="#FlameSprayPyrolysisReactor" title="https://w3id.org/pmd/fsp/FlameSprayPyrolysisReactor">Flame Spray Pyrolysis Reactor</a></li>
+  <li><a href="#FlamesprayPyrolysis" title="https://w3id.org/pmd/fsp/FlamesprayPyrolysis">Flammensprühpyrolyse</a></li>
+  <li><a href="#FuelGas" title="https://w3id.org/pmd/fsp/FuelGas">Fuel Gas</a></li>
+  <li><a href="#GasFlow" title="https://w3id.org/pmd/fsp/GasFlow">Gas Flow</a></li>
+  <li><a href="#GDFFilter" title="https://w3id.org/pmd/fsp/GDFFilter">GD/F Filter</a></li>
+  <li><a href="#LOT" title="https://w3id.org/pmd/fsp/LOT">LOT</a></li>
+  <li><a href="#Mixing" title="https://w3id.org/pmd/fsp/Mixing">Mixing</a></li>
+  <li><a href="#Molarity" title="https://w3id.org/pmd/fsp/Molarity">Molarity</a></li>
+  <li><a href="#Nanoparticle" title="https://w3id.org/pmd/fsp/Nanoparticle">Nanoparticle</a></li>
+  <li><a href="#NanoparticleFilter" title="https://w3id.org/pmd/fsp/NanoparticleFilter">Nanoparticle Filter</a></li>
+  <li><a href="#NanoparticleSynthesis" title="https://w3id.org/pmd/fsp/NanoparticleSynthesis">Nanoparticle Synthesis</a></li>
+  <li><a href="#Nozzle" title="https://w3id.org/pmd/fsp/Nozzle">Nozzle</a></li>
+  <li><a href="#NozzleFilterDistance" title="https://w3id.org/pmd/fsp/NozzleFilterDistance">Nozzle Filter Distance</a></li>
+  <li><a href="#NozzleNozzleDistance" title="https://w3id.org/pmd/fsp/NozzleNozzleDistance">Nozzle Nozzle Distance</a></li>
+  <li><a href="#OxidationGas" title="https://w3id.org/pmd/fsp/OxidationGas">Oxidation Gas</a></li>
+  <li><a href="#Precursor" title="https://w3id.org/pmd/fsp/Precursor">Precursor</a></li>
+  <li><a href="#Pressure" title="https://w3id.org/pmd/fsp/Pressure">Pressure</a></li>
+  <li><a href="#PressureDrop" title="https://w3id.org/pmd/fsp/PressureDrop">Pressure Drop</a></li>
+  <li><a href="#Provider" title="https://w3id.org/pmd/fsp/Provider">Provider</a></li>
+  <li><a href="#Reactor" title="https://w3id.org/pmd/fsp/Reactor">Reactor</a></li>
+  <li><a href="#Purity" title="https://w3id.org/pmd/fsp/Purity">Reinheit</a></li>
+  <li><a href="#SheathGas" title="https://w3id.org/pmd/fsp/SheathGas">Sheath Gas</a></li>
+  <li><a href="#Solute" title="https://w3id.org/pmd/fsp/Solute">Solute</a></li>
+  <li><a href="#Solvent" title="https://w3id.org/pmd/fsp/Solvent">Solvent</a></li>
+  <li><a href="#SpraySynNozzle" title="https://w3id.org/pmd/fsp/SpraySynNozzle">Spray Syn Nozzle</a></li>
+  <li><a href="#TethisNozzle" title="https://w3id.org/pmd/fsp/TethisNozzle">Tethis Nozzle</a></li>
+  <li><a href="#VacuumPump" title="https://w3id.org/pmd/fsp/VacuumPump">Vacuum Pump</a></li>
+  <li><a href="#Volume" title="https://w3id.org/pmd/fsp/Volume">Volume</a></li>
+  <li><a href="#VolumeFlow" title="https://w3id.org/pmd/fsp/VolumeFlow">Volumenstrom</a></li>
+  <li><a href="#Angle" title="https://w3id.org/pmd/fsp/Angle">Winkel</a></li>
+ </ul>
+ <div class="entity" id="Cylindric">
+  <h3>Cylindric<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Cylindric</p>
+  <div class="comment">
+   <span class="markdown">Relating to or having the form or properties of a cylinder.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    “Cylindrical.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/cylindrical. Accessed 7 Apr. 2024.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Shape" target="_blank" title="https://w3id.org/pmd/co/Shape">Shape</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DepositionComponent">
+  <h3>Deposition Component<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/DepositionComponent</p>
+  <div class="comment">
+   <span class="markdown">The component used to separate an entity from a gas flow, e.g. a filter.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Component" target="_blank" title="https://w3id.org/pmd/co/Component">Component</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#NanoparticleFilter" title="https://w3id.org/pmd/fsp/NanoparticleFilter">Nanoparticle Filter</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DispersionGas">
+  <h3>Dispersion Gas<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/DispersionGas</p>
+  <div class="comment">
+   <span class="markdown">Gas which is used to disperse a liquid into droplets.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://purl.obolibrary.org/obo/CHEBI_138675" target="_blank" title="http://purl.obolibrary.org/obo/CHEBI_138675">C H E B I 138675</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/pmd/co/Object" target="_blank" title="https://w3id.org/pmd/co/Object">Object</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Enclosure">
+  <h3>Enclosure<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Enclosure</p>
+  <div class="comment">
+   <span class="markdown">Physical hollow body which surrounds an entitiy with the purpose to protect it from ambient influences.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Component" target="_blank" title="https://w3id.org/pmd/co/Component">Component</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FeedRate">
+  <h3>Feed Rate<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/FeedRate</p>
+  <div class="comment">
+   <span class="markdown">Temporal rate with which a defined volume of a species is fed into a process.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#VolumeFlow" title="https://w3id.org/pmd/fsp/VolumeFlow">Volumenstrom</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FlameSprayPyrolysisReactor">
+  <h3>Flame Spray Pyrolysis Reactor<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/FlameSprayPyrolysisReactor</p>
+  <div class="comment">
+   <span class="markdown">static experimental set-up of the flame spray pyrolysis process, including nozzle and deposition specifications</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Reactor" title="https://w3id.org/pmd/fsp/Reactor">Reactor</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FlamesprayPyrolysis">
+  <h3>Flammensprühpyrolyse<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/FlamesprayPyrolysis</p>
+  <div class="comment">
+   <span class="markdown">A manufacturing process with the intend to synthesize aggregated nanoparticles in the gas phase through the controlled combustion of a dispersed liquid precursor solution.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#NanoparticleSynthesis" title="https://w3id.org/pmd/fsp/NanoparticleSynthesis">Nanoparticle Synthesis</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FuelGas">
+  <h3>Fuel Gas<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/FuelGas</p>
+  <div class="comment">
+   <span class="markdown">Educt gas taking part in a combustion process.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://purl.obolibrary.org/obo/CHEBI_138675" target="_blank" title="http://purl.obolibrary.org/obo/CHEBI_138675">C H E B I 138675</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/pmd/co/Object" target="_blank" title="https://w3id.org/pmd/co/Object">Object</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GasFlow">
+  <h3>Gas Flow<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/GasFlow</p>
+  <div class="comment">
+   <span class="markdown">The volume flow of a gas.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#VolumeFlow" title="https://w3id.org/pmd/fsp/VolumeFlow">Volumenstrom</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GDFFilter">
+  <h3>GD/F Filter<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/GDFFilter</p>
+  <div class="comment">
+   <span class="markdown">Filter class, made of amorphous silicon dioxide.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#NanoparticleFilter" title="https://w3id.org/pmd/fsp/NanoparticleFilter">Nanoparticle Filter</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LOT">
+  <h3>LOT<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/LOT</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Identifier" target="_blank" title="https://w3id.org/pmd/co/Identifier">Identifier</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Mixing">
+  <h3>Mixing<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Mixing</p>
+  <div class="comment">
+   <span class="markdown">process of combining two or more, initially spatially separated, species into one homogeneous mixture</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/ManufacturingProcess" target="_blank" title="https://w3id.org/pmd/co/ManufacturingProcess">Manufacturing Process</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Molarity">
+  <h3>Molarity<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Molarity</p>
+  <div class="comment">
+   <span class="markdown">Molarity is a unit of concentration expressed as the number of moles of dissolved solute per liter of solution.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    DONALD J. PIETRZYK, CLYDE W. FRANK, in Analytical Chemistry, 1979
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Chemical" target="_blank" title="https://w3id.org/pmd/co/Chemical">Chemical</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Nanoparticle">
+  <h3>Nanoparticle<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Nanoparticle</p>
+  <div class="comment">
+   <span class="markdown">A nanoscale particle</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd></dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/EngineeredMaterial" target="_blank" title="https://w3id.org/pmd/co/EngineeredMaterial">Engineered Material</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NanoparticleFilter">
+  <h3>Nanoparticle Filter<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/NanoparticleFilter</p>
+  <div class="comment">
+   <span class="markdown">A component used for retrieving nanoparticles from the gas flow. Nanoparticles will accumulate on the filter and can later be scraped off.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#DepositionComponent" title="https://w3id.org/pmd/fsp/DepositionComponent">Deposition Component</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#GDFFilter" title="https://w3id.org/pmd/fsp/GDFFilter">GD/F Filter</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NanoparticleSynthesis">
+  <h3>Nanoparticle Synthesis<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/NanoparticleSynthesis</p>
+  <div class="comment">
+   <span class="markdown">A manufacturing process with the intend to synthesize nanoparticles.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/ManufacturingProcess" target="_blank" title="https://w3id.org/pmd/co/ManufacturingProcess">Manufacturing Process</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#FlamesprayPyrolysis" title="https://w3id.org/pmd/fsp/FlamesprayPyrolysis">Flammensprühpyrolyse</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Nozzle">
+  <h3>Nozzle<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Nozzle</p>
+  <div class="comment">
+   <span class="markdown">A short tube with a taper or constriction used (as on a hose) to speed up or direct a flow of fluid.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    “Nozzle. ” Merriam-Webster.com Dictionary, Merriam-Webster, https://dictionary.cambridge.org/dictionary/english/nozzle. Accessed 7 Apr., 2024
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Component" target="_blank" title="https://w3id.org/pmd/co/Component">Component</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#SpraySynNozzle" title="https://w3id.org/pmd/fsp/SpraySynNozzle">Spray Syn Nozzle</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#TethisNozzle" title="https://w3id.org/pmd/fsp/TethisNozzle">Tethis Nozzle</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NozzleFilterDistance">
+  <h3>Nozzle Filter Distance<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/NozzleFilterDistance</p>
+  <div class="comment">
+   <span class="markdown">Distance bewtween the annular gap of a nozzle and a filter medium.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Distance" target="_blank" title="https://w3id.org/pmd/co/Distance">Distance</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NozzleNozzleDistance">
+  <h3>Nozzle Nozzle Distance<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/NozzleNozzleDistance</p>
+  <div class="comment">
+   <span class="markdown">Euclidean distance between the annular gaps of two nozzles.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Distance" target="_blank" title="https://w3id.org/pmd/co/Distance">Distance</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OxidationGas">
+  <h3>Oxidation Gas<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/OxidationGas</p>
+  <div class="comment">
+   <span class="markdown">Educt gas which contributes as an oxygen source in a combustion process.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://purl.obolibrary.org/obo/CHEBI_138675" target="_blank" title="http://purl.obolibrary.org/obo/CHEBI_138675">C H E B I 138675</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/pmd/co/Object" target="_blank" title="https://w3id.org/pmd/co/Object">Object</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Precursor">
+  <h3>Precursor<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Precursor</p>
+  <div class="comment">
+   <span class="markdown">Liquid solution composed of solvent and solute that is dispersed and combusted in a flame spray pyrolysis process.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Blank" target="_blank" title="https://w3id.org/pmd/co/Blank">Blank</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://purl.obolibrary.org/obo/CHEBI_75958" target="_blank" title="http://purl.obolibrary.org/obo/CHEBI_75958">C H E B I 75958</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Pressure">
+  <h3>Pressure<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Pressure</p>
+  <div class="comment">
+   <span class="markdown">The force or thrust exerted over a surface divided by its area.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    “Pressure.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/force. Accessed June 5th, 2023.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/ValueObject" target="_blank" title="https://w3id.org/pmd/co/ValueObject">Value Object</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PressureDrop">
+  <h3>Pressure Drop<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/PressureDrop</p>
+  <div class="comment">
+   <span class="markdown">A significant change in pressure measured over a time span or in a direction.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/ValueObject" target="_blank" title="https://w3id.org/pmd/co/ValueObject">Value Object</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Provider">
+  <h3>Provider<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Provider</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Organization" target="_blank" title="http://www.w3.org/ns/prov#Organization">Organization</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Reactor">
+  <h3>Reactor<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Reactor</p>
+  <div class="comment">
+   <span class="markdown">An entity which contains and controls a process.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/ProcessingNode" target="_blank" title="https://w3id.org/pmd/co/ProcessingNode">Processing Node</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#FlameSprayPyrolysisReactor" title="https://w3id.org/pmd/fsp/FlameSprayPyrolysisReactor">Flame Spray Pyrolysis Reactor</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Purity">
+  <h3>Reinheit<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Purity</p>
+  <div class="comment">
+   <span class="markdown">The quality or state of being pure</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    “Purity.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/purity. Accessed 7 Apr. 2024.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Chemical" target="_blank" title="https://w3id.org/pmd/co/Chemical">Chemical</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SheathGas">
+  <h3>Sheath Gas<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/SheathGas</p>
+  <div class="comment">
+   <span class="markdown">Gas which protects an entity from ambient influences, e.g. oxygen entrainment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://purl.obolibrary.org/obo/CHEBI_138675" target="_blank" title="http://purl.obolibrary.org/obo/CHEBI_138675">C H E B I 138675</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/pmd/co/Object" target="_blank" title="https://w3id.org/pmd/co/Object">Object</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Solute">
+  <h3>Solute<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Solute</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://purl.obolibrary.org/obo/CHEBI_24431" target="_blank" title="http://purl.obolibrary.org/obo/CHEBI_24431">C H E B I 24431</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Solvent">
+  <h3>Solvent<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Solvent</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://purl.obolibrary.org/obo/CHEBI_24431" target="_blank" title="http://purl.obolibrary.org/obo/CHEBI_24431">C H E B I 24431</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpraySynNozzle">
+  <h3>Spray Syn Nozzle<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/SpraySynNozzle</p>
+  <div class="comment">
+   <span class="markdown">A standard for a free-jet type burner that offers well-defined and simulation-friendly boundary conditions and geometries as well as accessibility for optical diagnostics.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    Schneider, F., Suleiman, S., Menser, J., Borukhovich, E., Wlokas, I., Kempf, A., Wiggers, H., and Schulz, C., Spraysyn—A Standardized Burner Configuration for Nanoparticle Synthesis in Spray Flames, Rev. Scientific Instr., vol. 90, no. 8, p. 085108, 2019.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Nozzle" title="https://w3id.org/pmd/fsp/Nozzle">Nozzle</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#TethisNozzle" title="https://w3id.org/pmd/fsp/TethisNozzle">Tethis Nozzle</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TethisNozzle">
+  <h3>Tethis Nozzle<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/TethisNozzle</p>
+  <div class="comment">
+   <span class="markdown">An external-mixing gas-assisted nozzle that is made from a capillary tube of outer diameter 0.91 mm (inner diameter 0.6 mm) that lies in an opening of 1.2 mm in diameter creating an annular gap of 0.48 mm^2 maximum area. Precursor and fuel flow through the capillary tube while the dispersion gas passes through the annular gap. The capillary ends 0.5 mm above the opening.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    L. Madler, H.K. Kammler, R. Mueller, S.E. Pratsinis, Controlled synthesis of nanostructured particles by flame spray pyrolysis, Journal of Aerosol Science, Volume 33, Issue 2, 2002
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#Nozzle" title="https://w3id.org/pmd/fsp/Nozzle">Nozzle</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#SpraySynNozzle" title="https://w3id.org/pmd/fsp/SpraySynNozzle">Spray Syn Nozzle</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VacuumPump">
+  <h3>Vacuum Pump<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/VacuumPump</p>
+  <div class="comment">
+   <span class="markdown">A piece of equipment for removing air or gas from a container, creating a vacuum inside.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    “Vacuump Pump. ” Merriam-Webster.com Dictionary, Merriam-Webster, https://dictionary.cambridge.org/dictionary/english/vacuum-pump. Accessed 7 Apr., 2024
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/Component" target="_blank" title="https://w3id.org/pmd/co/Component">Component</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Volume">
+  <h3>Volume<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Volume</p>
+  <div class="comment">
+   <span class="markdown">The amount of space occupied by a three-dimensional object as measured in cubic units (such as quarts or liters).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    “Volume.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/volume. Accessed 7 Apr. 2024.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/ValueObject" target="_blank" title="https://w3id.org/pmd/co/ValueObject">Value Object</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VolumeFlow">
+  <h3>Volumenstrom<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/VolumeFlow</p>
+  <div class="comment">
+   <span class="markdown">Temporal rate with which a defined volume of a species is moving.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/ValueObject" target="_blank" title="https://w3id.org/pmd/co/ValueObject">Value Object</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#FeedRate" title="https://w3id.org/pmd/fsp/FeedRate">Feed Rate</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#GasFlow" title="https://w3id.org/pmd/fsp/GasFlow">Gas Flow</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Angle">
+  <h3>Winkel<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/pmd/fsp/Angle</p>
+  <div class="comment">
+   <span class="markdown">The inclination of an entity with respect to a reference plane</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    https://w3id.org/pmd/fsp
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/pmd/co/ValueObject" target="_blank" title="https://w3id.org/pmd/co/ValueObject">Value Object</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h2>Anmerkungseigenschaften</h2>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition"> <span>definition</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/license" title="http://purl.org/dc/elements/1.1/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+  <h3>creator<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#definition">
+  <h3>definition<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#definition</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/license">
+  <h3>license<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div id="legend">
+<h2>Legende <span class="backlink"> zur&uuml;ck zu <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Danksagung <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<p>
+Die Autoren bedanken sich bei<a href="http://www.essepuntato.it/">Silvio Peroni</a> f&uuml;r die Entwicklung von <a href="http://www.essepuntato.it/lode">LODE</a>, einer Umgebung zur Live-OWL-Dokumentation, die im Abschnitt Querverweise f&uuml;r die Darstellung verwendet wird, bei <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> f&uuml;r die Entwicklung von <a href="https://github.com/dgarijo/Widoco">Widoco</a>, welches f&uuml;r die Templates in dieser Anwendung verwendet wird.</p>
+</div>
+
+
+</div>
+</body>
+</html>
