@@ -9,10 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-      #with:
-      #ref: v2.0.8
-      #path: v2.0.8
-    - name: Build HTML for 2.0.8
+    - name: Build HTML 
       run: | 
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
            mkdir public
